@@ -8,13 +8,16 @@
     "vscode": {
       "extensions": [
         "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
         "github.vscode-github-actions"
       ],
       "settings": {
         "git.autofetch": false,
         "git.confirmSync": false,
         "files.autoSave": "afterDelay",
-        "terminal.integrated.defaultProfile.linux": "bash"
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "C_Cpp.default.cppStandard": "c++17",
+        "C_Cpp.default.intelliSenseMode": "linux-gcc-x64"
       }
     }
   },

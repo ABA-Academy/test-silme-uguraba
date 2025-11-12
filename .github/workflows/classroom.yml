@@ -1,0 +1,36 @@
+name: Otomatik Test
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: C++ Testi
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Derle
+      run: |
+        g++ -o program main.cpp
+        
+    - name: Calistir
+      id: run
+      run: |
+        ./program > output.txt
+        cat output.txt
+        
+    - name: Test 1 - Hello World
+      run: |
+        if grep -q "Hello, World!" output.txt; then
+          echo "Test 1 BASARILI: Hello World yazdirildi"
+        else
+          echo "Test 1 BASARISIZ: Hello World bulunamadi"
+          echo "Beklenen: Hello, World!"
+          echo "Sizin ciktiniz:"
+          cat output.txt
+          exit 1
+        fi

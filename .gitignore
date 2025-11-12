@@ -1,0 +1,9 @@
+# Derlenmiş dosyalar
+*.out
+*.exe
+a.out
+*.o
+
+# IDE dosyaları
+.vscode/
+.idea/

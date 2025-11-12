@@ -1,0 +1,4 @@
+# Conflict otomatik çözülür (öğrenci kodu kazanır)
+*.cpp merge=ours
+*.h merge=ours
+*.hpp merge=ours

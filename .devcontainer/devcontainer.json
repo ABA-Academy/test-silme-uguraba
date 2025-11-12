@@ -1,0 +1,25 @@
+{
+  "name": "C++ Programlama",
+  "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu",
+  
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "github.vscode-github-actions"
+      ],
+      "settings": {
+        "git.autofetch": false,
+        "git.confirmSync": false,
+        "files.autoSave": "afterDelay",
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  }
+}
